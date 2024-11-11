@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "7dfa2975-a67f-435d-873b-2e869496dd01",
+		"name": "Tugas Novi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18049595",
+		"_collection_link": "https://wmsmart.postman.co/workspace/POS-WM-MART~425d419c-d999-4d54-98d4-a70846640047/collection/18049595-7dfa2975-a67f-435d-873b-2e869496dd01?action=share&source=collection_link&creator=18049595"
+	},
+	"item": [
+		{
+			"name": "Tambah Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Product7\",\n    \"description\" : \"deskripsi Product7\",\n    \"price\" : \"10000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Daftar Seluruh Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Hapus",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/products/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"2"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \n        \"name\": \"Product14\",\n        \"description\": \"deskripsi Product13\",\n        \"price\": 10000.0\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/products/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Cari",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/products/3"
+			},
+			"response": []
+		}
+	]
+}
